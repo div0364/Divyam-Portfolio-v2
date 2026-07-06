@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* offset for the fixed navbar when jumping to anchors */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply bg-paper-50 text-ink-900 antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  .dark body {
+    @apply bg-ink-950 text-paper-100;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-ink-950;
+  }
+  .dark ::selection {
+    @apply bg-accent/40 text-paper-50;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-700/40 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent/50;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  /* accent gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent via-accent-soft to-teal2 bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  .card {
+    @apply rounded-2xl border border-paper-200/80 bg-white/70 backdrop-blur-sm transition-all duration-300;
+  }
+  .dark .card {
+    @apply border-ink-700/60 bg-ink-850/60;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-paper-200 bg-paper-100/80 px-3 py-1 text-xs font-medium text-ink-800 transition-colors;
+  }
+  .dark .chip {
+    @apply border-ink-700/70 bg-ink-800/70 text-paper-100/90;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* subtle dotted grid background used behind the hero */
+.bg-grid {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 26px 26px;
+}
