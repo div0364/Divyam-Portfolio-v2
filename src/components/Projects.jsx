@@ -36,9 +36,14 @@ export default function Projects() {
               </div>
 
               {p.links?.live && (
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-teal2/40 bg-teal2/10 px-2.5 py-1 text-[11px] font-semibold text-teal2-deep dark:text-teal2">
+                <a
+                  href={p.links.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-teal2/40 bg-teal2/10 px-2.5 py-1 text-[11px] font-semibold text-teal2-deep transition-colors hover:bg-teal2/20 dark:text-teal2"
+                >
                   <Radio size={12} className="animate-pulse" /> Live
-                </span>
+                </a>
               )}
             </div>
 
@@ -78,7 +83,16 @@ export default function Projects() {
       <Reveal delay={0.1} className="mt-6">
         <p className="text-center text-xs text-ink-800/50 dark:text-paper-100/40">
           <ExternalLink size={12} className="mr-1 inline" />
-          Live demo &amp; source links available on request / GitHub.
+          Live demos linked above · more source code on{' '}
+          <a
+            href="https://github.com/div0364"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent hover:underline"
+          >
+            GitHub
+          </a>
+          .
         </p>
       </Reveal>
     </Section>

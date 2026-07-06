@@ -1,12 +1,6 @@
 // ============================================================================
 //  RESUME DATA  —  Divyam Sinha
 //  All content below is extracted verbatim from the resume (Divyam_resume_v6.pdf).
-//
-//  ⚠️  ACTION REQUIRED: The resume lists LinkedIn / GitHub / LeetCode / Codeforces
-//      as hyperlinks, but the underlying URLs are NOT embedded as text in the PDF.
-//      The four URLs below are BEST-GUESS PLACEHOLDERS — replace them with your
-//      real profile URLs so the links work. Email, phone, and platform ratings
-//      are taken directly from the resume and are correct.
 // ============================================================================
 
 export const profile = {
@@ -22,11 +16,10 @@ export const profile = {
 export const contact = {
   email: 'divyamsinha442003@gmail.com',
   phone: '+91-9031787124',
-  // 🔧 REPLACE these four with your real profile URLs:
-  linkedin: 'https://www.linkedin.com/in/divyam-sinha/',
-  github: 'https://github.com/divyamsinha',
-  leetcode: 'https://leetcode.com/u/divyamsinha/',
-  codeforces: 'https://codeforces.com/profile/divyamsinha',
+  linkedin: 'https://www.linkedin.com/in/divyam-sinha-628bb924a/',
+  github: 'https://github.com/div0364',
+  leetcode: 'https://leetcode.com/u/Divyamsinha2003/',
+  codeforces: 'https://codeforces.com/profile/BossDevil',
   // Resume PDF served from /public
   resume: '/Divyam_resume_v6.pdf',
 }
@@ -90,7 +83,7 @@ export const projects = [
     name: 'ResuTrackX',
     year: '2025',
     stack: ['FastAPI', 'Python', 'BERT', 'spaCy', 'Gemini', 'RAG', 'MongoDB', 'React'],
-    links: { live: true }, // resume marks it "Live"
+    links: { live: 'https://resume-frontend-liard.vercel.app/' },
     highlights: [
       'Built a full-stack AI application with a FastAPI backend serving BERT + TF-IDF ranking and NLP extraction (spaCy + PyMuPDF) at under few seconds PDF — showcasing real-time software design and analytical problem solving.',
       'Implemented a RAG pipeline using sentence-transformer embeddings and cosine-similarity semantic search to ground LLM (Gemini) responses in a knowledge base; achieved enhanced precision on a 200-resume benchmark.',
@@ -102,7 +95,7 @@ export const projects = [
     name: 'Chattrix',
     year: '2025',
     stack: ['MERN', 'Socket.io', 'Zustand', 'Cloudinary'],
-    links: { live: true }, // resume marks it "Live"
+    links: { live: 'https://messanger-app-t59f.onrender.com/' },
     highlights: [
       'Engineered a real-time messaging platform using WebSocket (Socket.io) supporting 100+ concurrent users at sub-100ms latency — directly relevant to real-time protocol stack design (WebSocket).',
       'Built a REST API on Express.js + MongoDB with Cloudinary CDN integration, cutting media load time and sustained uptime on Render with global state managed via Zustand.',
